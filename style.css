@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Novais Resgalla — Advocacia em Família e Sucessões
+   Arnhold & Jubett Advocacia — Advocacia Integrada
    Design System: Minimalista, Nobre, Editorial e Contemporâneo
    ========================================================================== */
 
@@ -314,13 +314,15 @@ button, input, select, textarea {
   z-index: 1;
   overflow: hidden;
   pointer-events: none;
+  background-color: var(--color-bg);
 }
 
 .hero-bg-img {
-  width: 100%;
+  width: 78%;
   height: 100%;
+  margin-left: auto;
   object-fit: cover;
-  object-position: right center;
+  object-position: 38% 25%;
   display: block;
 }
 
@@ -330,10 +332,10 @@ button, input, select, textarea {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, 
-    rgba(250, 248, 245, 0.98) 0%, 
-    rgba(250, 248, 245, 0.94) 38%, 
-    rgba(250, 248, 245, 0.55) 55%, 
-    rgba(250, 248, 245, 0) 72%
+    rgba(250, 248, 245, 1) 0%, 
+    rgba(250, 248, 245, 0.96) 30%, 
+    rgba(250, 248, 245, 0.45) 45%, 
+    rgba(250, 248, 245, 0) 58%
   );
 }
 
@@ -1100,6 +1102,7 @@ body.modal-open {
   line-height: 1.8;
   color: var(--color-text-muted);
   font-weight: 300;
+  text-align: justify;
 }
 
 .sobre-intro-text p {
@@ -1113,6 +1116,19 @@ body.modal-open {
 .sobre-intro-text strong {
   color: var(--color-text);
   font-weight: 600;
+}
+
+.sobre-intro-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sobre-intro-desktop {
+    display: none;
+  }
+  .sobre-intro-mobile {
+    display: block;
+  }
 }
 
 /* Vitrine das Sócias em Linhas Alternadas */
@@ -1160,7 +1176,7 @@ body.modal-open {
   font-weight: 400;
   color: var(--color-text);
   line-height: 1.15;
-  margin-bottom: 6px;
+  margin-bottom: 18px;
   letter-spacing: -0.015em;
 }
 
@@ -1228,7 +1244,7 @@ body.modal-open {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 60%;
   display: block;
 }
 
@@ -1305,7 +1321,7 @@ body.modal-open {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center 35%;
   display: block;
 }
 
@@ -1661,7 +1677,8 @@ body.modal-open {
   }
 
   .hero-bg-img {
-    object-position: 75% center;
+    width: 100%;
+    object-position: 45% center;
   }
 
   .hero-bg-overlay {
@@ -1731,7 +1748,7 @@ body.modal-open {
 
   .split-image-container {
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 5;
     max-width: 100%;
     margin: 0 auto;
     width: 100%;
