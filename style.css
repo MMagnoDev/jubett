@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Arnhold & Jubett Advocacia — Advocacia Integrada
+   Arnhold & Jubett Advocacia — Advocacia
    Design System: Minimalista, Nobre, Editorial e Contemporâneo
    ========================================================================== */
 
@@ -103,6 +103,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 img {
@@ -318,11 +327,10 @@ button, input, select, textarea {
 }
 
 .hero-bg-img {
-  width: 78%;
+  width: 100%;
   height: 100%;
-  margin-left: auto;
   object-fit: cover;
-  object-position: 38% 25%;
+  object-position: right center;
   display: block;
 }
 
@@ -333,9 +341,10 @@ button, input, select, textarea {
   height: 100%;
   background: linear-gradient(90deg, 
     rgba(250, 248, 245, 1) 0%, 
-    rgba(250, 248, 245, 0.96) 30%, 
-    rgba(250, 248, 245, 0.45) 45%, 
-    rgba(250, 248, 245, 0) 58%
+    rgba(250, 248, 245, 0.98) 38%, 
+    rgba(250, 248, 245, 0.85) 50%, 
+    rgba(250, 248, 245, 0.25) 62%, 
+    rgba(250, 248, 245, 0) 70%
   );
 }
 
@@ -396,7 +405,7 @@ button, input, select, textarea {
 }
 
 .hero-body {
-  max-width: 580px;
+  max-width: 540px;
   margin: auto 0;
   padding: 30px 0;
 }
@@ -423,8 +432,8 @@ button, input, select, textarea {
 
 .hero-desc {
   font-size: 1.05rem;
-  font-weight: 300;
-  color: var(--color-text-muted);
+  font-weight: 400;
+  color: #3A3531;
   line-height: 1.7;
 }
 
@@ -734,6 +743,15 @@ body.modal-open {
 .minimal-link-card:hover {
   transform: translateY(-2px);
   border-color: var(--color-accent);
+}
+
+.minimal-link-card.minimal-link-static {
+  cursor: default;
+}
+
+.minimal-link-card.minimal-link-static:hover {
+  transform: none;
+  border-color: var(--color-border);
 }
 
 .link-card-left {
@@ -1176,8 +1194,18 @@ body.modal-open {
   font-weight: 400;
   color: var(--color-text);
   line-height: 1.15;
-  margin-bottom: 18px;
+  margin-bottom: 4px;
   letter-spacing: -0.015em;
+}
+
+.socia-badge-oab {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 16px;
 }
 
 .socia-role {
@@ -1193,6 +1221,11 @@ body.modal-open {
   line-height: 1.74;
   font-weight: 300;
   margin-bottom: 14px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: normal;
 }
 
 .socia-bio p:last-child {
@@ -1246,6 +1279,10 @@ body.modal-open {
   object-fit: cover;
   object-position: center 60%;
   display: block;
+}
+
+.socia-img-tatiane {
+  object-position: center 35%;
 }
 
 /* Header dos Pilares */
@@ -1332,34 +1369,42 @@ body.modal-open {
 }
 
 .pilar-basic-card {
-  background: var(--color-bg-secondary);
-  border: 1px solid var(--color-border);
+  background: #1A1613;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--color-accent);
   border-radius: 0;
   padding: 18px 22px;
-  box-shadow: none;
-  transition: transform var(--transition), border-color var(--transition), background-color var(--transition);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform var(--transition), border-color var(--transition), background-color var(--transition), box-shadow var(--transition);
 }
 
 .pilar-basic-card:hover {
   transform: translateX(4px);
   border-color: var(--color-accent);
-  background: #FFFFFF;
+  background: #241F1A;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .pilar-basic-card h4 {
   font-family: var(--font-title);
-  font-size: 1.12rem;
+  font-size: 1.15rem;
   font-weight: 500;
-  color: var(--color-text);
-  margin-bottom: 4px;
+  color: #F6F3ED;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
 
 .pilar-basic-card p {
   font-size: 0.88rem;
-  color: var(--color-text-muted);
-  line-height: 1.55;
+  color: #ACA194;
+  line-height: 1.6;
   font-weight: 300;
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: normal;
 }
 
 /* 4 Métodos de Avaliação Física */
@@ -1460,6 +1505,7 @@ body.modal-open {
   line-height: 1.65;
   max-width: 620px;
   margin-bottom: 32px;
+  text-align: center;
 }
 
 .cta-btn-wrapper {
@@ -1510,6 +1556,46 @@ body.modal-open {
 
 .footer-logo:hover {
   opacity: 1;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 680px;
+  margin: 6px 0 10px;
+}
+
+.footer-address,
+.footer-contact,
+.footer-oab {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-contact-link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color var(--transition);
+}
+
+.footer-contact-link:hover {
+  color: var(--color-accent);
+}
+
+.footer-oab {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  font-weight: 600;
 }
 
 .footer-copyright {
@@ -1678,7 +1764,7 @@ body.modal-open {
 
   .hero-bg-img {
     width: 100%;
-    object-position: 45% center;
+    object-position: 80% center;
   }
 
   .hero-bg-overlay {
